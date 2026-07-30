@@ -12,10 +12,10 @@ export class ImageCarousel implements OnInit, OnDestroy {
   constructor(private cdr: ChangeDetectorRef) {}
 
   images = [
-    '/images/CSS3.jpg',
-    '/images/html.jpg',
-    '/images/JavaScript.jpg',
-    '/images/Typescript.jpg'
+    'images/CSS3.jpg',
+    'images/html.jpg',
+    'images/JavaScript.jpg',
+    'images/Typescript.jpg'
   ];
 
   currentIndex = 0;

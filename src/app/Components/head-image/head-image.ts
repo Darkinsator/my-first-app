@@ -8,6 +8,6 @@ import { Component } from '@angular/core';
 })
 export class HeadImage {
 
-  imageSrc = '/images/userimage.png';
+  imageSrc = 'images/userimage.png';
 
 }

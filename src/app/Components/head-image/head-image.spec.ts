@@ -19,4 +19,8 @@ describe('HeadImage', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should use a relative image path for GitHub Pages deployments', () => {
+    expect(component.imageSrc).toBe('images/userimage.png');
+  });
 });
