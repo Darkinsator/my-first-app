@@ -1,0 +1,32 @@
+<div class="projects-carousel">
+  <div class="carousel-viewport">
+    <div class="carousel-track" [style.transform]="'translateX(-' + (currentIndex * cardWidth) + 'px)'">
+
+      @for(project of projects; track project){
+        <article class="project-card"
+          [class.project-card-featured]="project.variant === 'featured'"
+          [class.project-card-dark]="project.variant === 'dark'"
+          [class.project-card-outline]="project.variant === 'outline'">
+          <div class="project-index" [innerText]="projects.indexOf(project) + 1"></div>
+          <div class="project-card-content">
+            <p class="project-type" [innerText]="project.type"></p>
+            <h3 [innerText]="project.title"></h3>
+            <p [innerText]="project.description"></p>
+            <a class="project-link" [href]="project.link">View project <span aria-hidden="true">↗</span></a>
+          </div>
+        </article>
+      }
+
+    </div>
+  </div>
+
+  <div class="carousel-controls">
+    <button aria-label="Previous project" class="carousel-btn" (click)="previous()">←</button>
+    <div class="carousel-dots">
+      @for(project of projects; track project){
+        <button class="dot" [class.active]="projects.indexOf(project) === currentIndex" (click)="setIndex(projects.indexOf(project))" aria-label="Go to project"></button>
+      }
+    </div>
+    <button aria-label="Next project" class="carousel-btn" (click)="next()">→</button>
+  </div>
+</div>

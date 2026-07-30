@@ -1,0 +1,56 @@
+.projects-carousel {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.carousel-viewport {
+  overflow: hidden;
+  width: 100%;
+}
+
+.carousel-track {
+  display: flex;
+  gap: 16px;
+  transition: transform 0.5s ease-in-out;
+}
+
+.project-card {
+  min-height: 320px;
+  box-sizing: border-box;
+  padding: 20px;
+  width: 360px;
+  flex: 0 0 360px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.project-card-featured { background: var(--teal); }
+.project-card-dark { background: var(--paper); }
+.project-card-outline { border: 1px solid var(--ink); }
+
+.carousel-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+.carousel-btn {
+  background: transparent;
+  border: 1px solid var(--line);
+  color: var(--ink);
+  padding: 8px 12px;
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+
+.carousel-dots { display:flex; gap:8px; }
+.dot { width:10px; height:10px; border-radius:50%; background:#aab7b4; border:0; }
+.dot.active { background: var(--accent); }
+
+@media (max-width: 800px) {
+  .carousel-track { gap: 12px; }
+  .project-card { width: 100%; flex: 0 0 100%; }
+}

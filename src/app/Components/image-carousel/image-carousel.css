@@ -1,0 +1,38 @@
+
+.carousel-container {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+} 
+
+.carousel {
+    width: 250px;
+    height: 250px;
+    overflow: hidden;
+    
+}
+
+.carousel-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    
+}
+
+.carousel img {
+    width: 250px;
+    height: 250px;
+    flex: 0 0 250px;
+    object-fit: stretch;
+}
+
+.button-row {
+  display: flex;
+  gap: 10px;
+}
+
+button {
+    margin: 5px;
+    padding: 10px 20px;
+}

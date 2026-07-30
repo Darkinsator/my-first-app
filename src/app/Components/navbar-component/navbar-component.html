@@ -1,0 +1,9 @@
+<nav class="navbar">
+  <div class="navbar-container">
+    <a class="navbar-logo" href="#home" (click)="closeMenu()">JASON BLANKENBERG<span>.</span></a>
+    <button class="navbar-toggle" type="button" aria-label="Toggle navigation" [attr.aria-expanded]="menuOpen()" (click)="toggleMenu()"><span></span><span></span></button>
+    <ul class="navbar-menu" [class.active]="menuOpen()">
+      <li><a href="#about" (click)="closeMenu()">About me</a></li><li><a href="#stack" (click)="closeMenu()">Tech stack</a></li><li><a href="#projects" (click)="closeMenu()">Projects</a></li><li><a href="#experience" (click)="closeMenu()">Experience</a></li><li><a href="#certificates" (click)="closeMenu()">Education</a></li><li><a href="#contact" (click)="closeMenu()">Contact</a></li>
+    </ul>
+  </div>
+</nav>

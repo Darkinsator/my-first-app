@@ -1,0 +1,31 @@
+<div class="carousel-container">   
+   <div class="carousel">
+        
+        <div
+            class="carousel-track"
+            [style.transform]="'translateX(-' + (currentIndex * 250) + 'px)'">
+
+            @for(image of images; track image){
+
+                <img
+                    [src]="image"
+                    alt="Carousel Image">
+
+            }
+
+        </div>
+
+    </div>
+
+    <div class="buttons-row">
+
+        <button (click)="previousImage()">
+            Previous
+        </button>
+
+        <button (click)="nextImage()">
+            Next
+        </button>
+
+    </div>
+</div>
